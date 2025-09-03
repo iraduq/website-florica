@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .light {
+    /* ==================================== */
+    /* 1. Culorile de bază (Default)       */
+    /* Acestea sunt valorile fallback.  */
+    /* ==================================== */
+    --default-primary: 262.1 83.3% 57.8%; /* Purple */
+    --default-accent: 262.1 83.3% 95%; /* Light Purple */
+    --default-success: 142.1 76.2% 36.3%; /* Green */
+    --default-warning: 32.2 94.6% 43.7%; /* Orange */
+    --default-info: 221.2 83.2% 53.3%; /* Blue */
+    --default-destructive: 0 84.2% 60.2%; /* Red */
+
+    /* ==================================== */
+    /* 2. Culorile personalizate (CUSTOM)  */
+    /* Acestea sunt setate dinamic.     */
+    /* ==================================== */
+    --theme-custom-primary: var(--default-primary);
+    --theme-custom-accent: var(--default-accent);
+    --theme-custom-success: var(--default-success);
+    --theme-custom-warning: var(--default-warning);
+    --theme-custom-info: var(--default-info);
+    --theme-custom-destructive: var(--default-destructive);
+
+    /* ================================================= */
+    /* 3. Culorile sistemului (System-wide variables)   */
+    /* Acestea leagă culorile de bază cu tema custom.    */
+    /* ================================================= */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --secondary: var(--theme-custom-accent);
+    --secondary-foreground: var(--theme-custom-primary);
+    --muted: var(--theme-custom-accent);
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: var(--theme-custom-accent);
+    --accent-foreground: var(--theme-custom-primary);
+    --destructive: var(--theme-custom-destructive);
+    --destructive-foreground: 0 0% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: var(--theme-custom-primary);
+    --radius: 0.5rem;
+    --primary: var(--theme-custom-primary);
+    --primary-foreground: 0 0% 98%;
+    --success: var(--theme-custom-success);
+    --success-foreground: 0 0% 98%;
+    --warning: var(--theme-custom-warning);
+    --warning-foreground: 0 0% 98%;
+    --info: var(--theme-custom-info);
+    --info-foreground: 0 0% 98%;
+
+    /* ================================================= */
+    /* 4. Culori specifice componentelor (Component-specific) */
+    /* ================================================= */
+    --dashboard-bg: 210 36% 96%;
+    --sidebar-background: #ffffff;
+    --sidebar-border: #e2e8f0;
+    --sidebar-foreground: var(--theme-custom-primary);
+  }
+
+  /* ==================================== */
+  /* Modul întunecat (Dark Mode)         */
+  /* ==================================== */
+  .dark {
+    /* Base colors for dark mode */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    /* Default colors for dark mode */
+    --default-primary: 210 50% 80%;
+    --default-accent: 210 40% 60%;
+    --default-success: 142.1 76.2% 46.3%;
+    --default-warning: 38.5 95.3% 48.8%;
+    --default-info: 217.2 91.2% 79.8%;
+    --default-destructive: 0 62.8% 30.6%;
+
+    /* Culori personalizate, folosite de componenta de customizare.
+       Acestea preiau valorile default, dar pot fi suprascrise. */
+    --theme-custom-primary: var(--default-primary);
+    --theme-custom-accent: var(--default-accent);
+    --theme-custom-success: var(--default-success);
+    --theme-custom-warning: var(--default-warning);
+    --theme-custom-info: var(--default-info);
+    --theme-custom-destructive: var(--default-destructive);
+
+    /* Main theme colors derived from custom colors. */
+    --primary: var(--theme-custom-primary);
+    --primary-foreground: 0 0% 98%;
+    --accent: var(--theme-custom-accent);
+    --accent-foreground: 0 0% 98%;
+    --destructive: var(--theme-custom-destructive);
+    --destructive-foreground: 0 0% 98%;
+    --ring: var(--theme-custom-primary);
+    --success: var(--theme-custom-success);
+    --success-foreground: 0 0% 98%;
+    --warning: var(--theme-custom-warning);
+    --warning-foreground: 0 0% 98%;
+    --info: var(--theme-custom-info);
+    --info-foreground: 0 0% 98%;
+
+    /* Culori pentru Sidebar */
+    --sidebar-background: #111827;
+    --sidebar-border: #374151;
+    --sidebar-foreground: #a0a7bb;
+  }
+}
